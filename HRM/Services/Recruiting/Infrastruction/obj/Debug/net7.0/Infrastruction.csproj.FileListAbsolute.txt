@@ -1,0 +1,15 @@
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.csproj.AssemblyReference.cache
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.GeneratedMSBuildEditorConfig.editorconfig
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.AssemblyInfoInputs.cache
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.AssemblyInfo.cs
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.csproj.CoreCompileInputs.cache
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/bin/Debug/net7.0/Infrastruction.deps.json
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/bin/Debug/net7.0/Infrastruction.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/bin/Debug/net7.0/Infrastruction.pdb
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/bin/Debug/net7.0/ApplicationCore.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/bin/Debug/net7.0/ApplicationCore.pdb
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.csproj.CopyComplete
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/refint/Infrastruction.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.pdb
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/ref/Infrastruction.dll

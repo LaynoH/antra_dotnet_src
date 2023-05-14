@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{B62107C0-6D75-4E19-B1FB-B4F6F08225AF}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Recruiting/Infrastruction/Repositories/Repository.cs">
+    <Files>
+      <File FileName="Services/Recruiting/RecruitingWeb/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Services/Recruiting/RecruitingWeb/Controllers/HomeController.cs" Line="29" Column="25" />
+      <File FileName="Services/Recruiting/RecruitingWeb/Program.cs" Line="1" Column="1" />
+      <File FileName="Services/Recruiting/RecruitingWeb/Views/Home/Test.cshtml" Line="1" Column="3" />
+      <File FileName="Services/Recruiting/Infrastruction/Repositories/Repository.cs" Line="4" Column="25" />
+      <File FileName="Services/Recruiting/Infrastruction/Repositories/JobRepository.cs" Line="4" Column="44" />
+      <File FileName="Services/Recruiting/ApplicationCore/Contracts/Repositories/IRepository.cs" Line="2" Column="11" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HRM" expanded="True">
+            <Node name="Recruiting" expanded="True">
+              <Node name="ApplicationCore" expanded="True">
+                <Node name="Contracts" expanded="True">
+                  <Node name=" Services" expanded="True" />
+                  <Node name="Repositories" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Infrastruction" expanded="True">
+                <Node name="Repositories" expanded="True">
+                  <Node name="Repository.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="RecruitingWeb" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="Home" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Recruiting.RecruitingWeb PreferredExecutionTarget="/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
