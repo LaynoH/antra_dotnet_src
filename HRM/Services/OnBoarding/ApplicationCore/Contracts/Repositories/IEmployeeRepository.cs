@@ -8,4 +8,5 @@ public interface IEmployeeRepository: IBaseRepository<Employee>
     Task<List<Employee>> GetAllEmployees();
     Task<Employee> GetEmployeeById(int id);
 
+    Task<Employee> AsInterviewer(int id);
 }

@@ -71,4 +71,18 @@ public class EmployeeController : ControllerBase
         return Ok(employee);
     }
     
+    [Route("interviewer")]
+    [HttpPut]
+    public async Task<IActionResult> AsInterviewer(int id)
+    {
+        var employees = await _employeeService.AsInterviewer(id);
+        if (employees==null)
+        {
+            return NotFound(new { error = "No Employee found for this id" });
+        }
+
+        return Ok(employees);
+        
+    }
+    
 }

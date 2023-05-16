@@ -67,4 +67,19 @@ public class EmployeeService : IEmployeeService
         }
         return employeeResponseModel;
     }
+
+    public async Task<EmployeeRequestModel> AsInterviewer(int id)
+    {
+        var employee = await _employeeRepository.AsInterviewer(id);
+        if (employee==null)
+        {
+            return null;
+        }
+        var employeeResponseModel = new EmployeeRequestModel
+        {
+            Id = employee.Id, Address = employee.Address, EmployeeStatusId = employee.EmployeeStatusId, 
+            FirstName = employee.FirstName, LastName = employee.LastName, SSN = employee.SSN
+        };
+        return employeeResponseModel;
+    }
 }

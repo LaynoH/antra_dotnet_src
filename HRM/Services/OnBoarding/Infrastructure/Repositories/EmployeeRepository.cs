@@ -25,5 +25,17 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
         var employee = await _dbContext.Employees.FirstOrDefaultAsync(j => j.Id == id);
         return employee;
     }
-    
+
+    public async Task<Employee> AsInterviewer(int id)
+    {
+        var employee = await _dbContext.Employees.FirstOrDefaultAsync(j => j.Id == id);
+        if (employee!= null)
+        {
+            employee.EmployeeStatusId = 3;
+            await _dbContext.SaveChangesAsync();
+            return employee;
+        }
+
+        return null;
+    }
 }
