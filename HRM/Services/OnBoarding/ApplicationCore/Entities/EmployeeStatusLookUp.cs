@@ -4,6 +4,7 @@ namespace ApplicationCore.Entities;
 
 public class EmployeeStatusLookUp
 {
+    public int Id { get; set; }
     [MaxLength(64)]
     public string EmployeeStatusCode { get; set; }
     

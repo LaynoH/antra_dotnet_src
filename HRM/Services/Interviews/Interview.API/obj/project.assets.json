@@ -3698,6 +3698,9 @@
       "ApplicationCore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4"
+        },
         "compile": {
           "bin/placeholder/ApplicationCore.dll": {}
         },
@@ -3710,7 +3713,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "ApplicationCore": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.4"
+          "Microsoft.EntityFrameworkCore": "7.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4"
         },
         "compile": {
           "bin/placeholder/Infrastructure.dll": {}

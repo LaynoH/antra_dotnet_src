@@ -17,7 +17,7 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
 builder.Services.AddDbContext<EmployeeDbContext>(options => options.UseSqlServer(builder.Configuration.
-    GetConnectionString("RecruitingDbConnection")));
+    GetConnectionString("EmployeeDbConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

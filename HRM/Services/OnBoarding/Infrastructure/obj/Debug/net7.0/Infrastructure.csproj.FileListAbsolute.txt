@@ -1,0 +1,15 @@
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/Infrastructure.csproj.AssemblyReference.cache
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/Infrastructure.AssemblyInfoInputs.cache
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/Infrastructure.AssemblyInfo.cs
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/bin/Debug/net7.0/Infrastructure.deps.json
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/bin/Debug/net7.0/Infrastructure.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/bin/Debug/net7.0/Infrastructure.pdb
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/bin/Debug/net7.0/ApplicationCore.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/bin/Debug/net7.0/ApplicationCore.pdb
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/Infrastructure.csproj.CopyComplete
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/Infrastructure.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/refint/Infrastructure.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/Infrastructure.pdb
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/OnBoarding/Infrastructure/obj/Debug/net7.0/ref/Infrastructure.dll

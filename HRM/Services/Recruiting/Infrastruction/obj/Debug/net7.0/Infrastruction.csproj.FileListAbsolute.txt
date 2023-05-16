@@ -13,3 +13,5 @@
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/refint/Infrastruction.dll
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.pdb
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/ref/Infrastruction.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/bin/Debug/net7.0/Infrastruction.runtimeconfig.json
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Infrastruction/obj/Debug/net7.0/Infrastruction.genruntimeconfig.cache

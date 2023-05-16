@@ -274,3 +274,7 @@
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Recruiting.API/bin/Debug/net7.0/Infrastruction.dll
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Recruiting.API/bin/Debug/net7.0/ApplicationCore.pdb
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Recruiting.API/bin/Debug/net7.0/Infrastruction.pdb
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Recruiting.API/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Recruiting.API/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Recruiting.API/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Recruiting/Recruiting.API/bin/Debug/net7.0/System.CodeDom.dll

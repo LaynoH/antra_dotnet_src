@@ -11,5 +11,6 @@ namespace Interview.API.Controllers
     [ApiController]
     public class InterviewsController : ControllerBase
     {
+        
     }
 }
