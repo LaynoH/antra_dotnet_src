@@ -1,7 +1,9 @@
 using ApplicationCore.Contracts.Repositories;
 using ApplicationCore.Contracts.Services;
+using Infrastruction.Data;
 using Infrastruction.Repositories;
 using Infrastruction.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IJobService, JobService>();
 builder.Services.AddScoped<IJobRepository, JobRepository>();
+
+builder.Services.AddDbContext<RecruitingDbContext>(options => options.UseSqlServer(builder.Configuration.
+    GetConnectionString("RecruitingDbConnection")));
 
 var app = builder.Build();
 

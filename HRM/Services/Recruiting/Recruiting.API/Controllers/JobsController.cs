@@ -51,17 +51,17 @@ namespace Recruiting.API.Controllers
             return Ok(job);
         }
 
-        [Route("")]
+        [Route("create")]
         [HttpPost]
         public async Task<IActionResult> Create(JobRequestModel model)
         {
-            if (! ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
 
             var job = await _jobService.AddJob(model);
-            return CreatedAtAction("GetJobDetails", new {controller = "Jobs", id = job, JobCreated = "Job Created"});
+            return CreatedAtAction("GetJobDetails", new { controller = "Jobs", id = job, JobCreated = "Job Created" });
         }
     }
 }

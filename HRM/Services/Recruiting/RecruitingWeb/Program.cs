@@ -13,7 +13,8 @@ builder.Services.AddControllersWithViews();
 // this is the line we injected 
 builder.Services.AddScoped<IJobService, JobService>();
 // inject our connectionstrings into DbContext
-builder.Services.AddDbContext<RecruitingDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RecruitingDbConnection")));
+builder.Services.AddDbContext<RecruitingDbContext>(options => options.UseSqlServer(builder.Configuration.
+    GetConnectionString("RecruitingDbConnection")));
 builder.Services.AddScoped<IJobRepository, JobRepository>();
 // ninject and autofrac
 
