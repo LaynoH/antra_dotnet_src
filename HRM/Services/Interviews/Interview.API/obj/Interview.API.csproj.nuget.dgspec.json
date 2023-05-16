@@ -1,0 +1,201 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/Interview.API.csproj": {}
+  },
+  "projects": {
+    "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/ApplicationCore/ApplicationCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/ApplicationCore/ApplicationCore.csproj",
+        "projectName": "ApplicationCore",
+        "projectPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/ApplicationCore/ApplicationCore.csproj",
+        "packagesPath": "/Users/elainechiang/.nuget/packages/",
+        "outputPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/ApplicationCore/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/elainechiang/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Infrastructure/Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Infrastructure/Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/Users/elainechiang/.nuget/packages/",
+        "outputPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/elainechiang/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/ApplicationCore/ApplicationCore.csproj": {
+                "projectPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/ApplicationCore/ApplicationCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/Interview.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/Interview.API.csproj",
+        "projectName": "Interview.API",
+        "projectPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/Interview.API.csproj",
+        "packagesPath": "/Users/elainechiang/.nuget/packages/",
+        "outputPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/elainechiang/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/ApplicationCore/ApplicationCore.csproj": {
+                "projectPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/ApplicationCore/ApplicationCore.csproj"
+              },
+              "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Infrastructure/Infrastructure.csproj": {
+                "projectPath": "/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Infrastructure/Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
