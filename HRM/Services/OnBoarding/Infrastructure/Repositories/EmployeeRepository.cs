@@ -1,6 +1,7 @@
 using System;
 using ApplicationCore.Contracts.Repositories;
 using ApplicationCore.Entities;
+using ApplicationCore.Models;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,4 +25,5 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
         var employee = await _dbContext.Employees.FirstOrDefaultAsync(j => j.Id == id);
         return employee;
     }
+    
 }

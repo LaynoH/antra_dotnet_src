@@ -45,7 +45,7 @@ namespace Recruiting.API.Controllers
             var job = await _jobService.GetJobById(id);
             if (job==null)
             {
-                return NotFound(new { error = "No job found for this id" });
+                return NotFound(new { errorMessage = "No job found for this id" });
             }
 
             return Ok(job);
@@ -61,7 +61,7 @@ namespace Recruiting.API.Controllers
             }
 
             var job = await _jobService.AddJob(model);
-            return CreatedAtAction("GetJobDetails", new { controller = "Jobs", id = job, JobCreated = "Job Created" });
+            return CreatedAtAction("GetJobDetails", new { controller = "Jobs", id = job}, "Job Created");
         }
     }
 }

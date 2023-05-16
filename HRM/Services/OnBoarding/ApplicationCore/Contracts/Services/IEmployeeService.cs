@@ -9,4 +9,6 @@ public interface IEmployeeService
     Task<EmployeeRequestModel> GetEmployeeById(int id);
 
     Task<int> AddEmployee(EmployeeRequestModel model);
+    
+    Task<List<EmployeeResponseModel>> DeleteEmployee(int id);
 }

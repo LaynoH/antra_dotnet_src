@@ -1,4 +1,6 @@
 using System.Linq.Expressions;
+using ApplicationCore.Entities;
+using ApplicationCore.Models;
 
 namespace ApplicationCore.Contracts.Repositories;
 
@@ -14,5 +16,5 @@ public interface IBaseRepository<T> where T : class
     
     Task<T> UpdateAsync(T entity);
     
-    Task<int> DeleteAsync(int id);
+    Task<List<Employee>> DeleteAsync(int id);
 }

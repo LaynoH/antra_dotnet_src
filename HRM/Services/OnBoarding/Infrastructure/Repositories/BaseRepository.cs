@@ -1,5 +1,7 @@
 using System.Linq.Expressions;
 using ApplicationCore.Contracts.Repositories;
+using ApplicationCore.Entities;
+using ApplicationCore.Models;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,8 +43,16 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class
         throw new NotImplementedException();
     }
 
-    public async Task<int> DeleteAsync(int id)
+    public async Task<List<Employee>> DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        var employee = await _dbContext.Employees.FirstOrDefaultAsync(j => j.Id == id);
+        if (employee != null)
+        {
+            _dbContext.Employees.Remove(employee);
+            await _dbContext.SaveChangesAsync();
+            var employees = await _dbContext.Employees.ToListAsync();
+            return employees;
+        }
+        return null;
     }
 }

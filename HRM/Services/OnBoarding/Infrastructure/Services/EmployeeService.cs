@@ -50,4 +50,21 @@ public class EmployeeService : IEmployeeService
         var employee = await _employeeRepository.AddAsync(employeeEntity);
         return employee.Id;
     }
+
+    public async Task<List<EmployeeResponseModel>> DeleteEmployee(int id)
+    {
+        var employeeDel = await _employeeRepository.DeleteAsync(id);
+        var employees = await _employeeRepository.GetAllEmployees();
+        var employeeResponseModel = new List<EmployeeResponseModel>();
+        foreach (var employee in employees)
+        {
+            employeeResponseModel.Add(new EmployeeResponseModel
+            {
+                Id = employee.Id, Address = employee.Address, EmployeeStatusId = employee.EmployeeStatusId, 
+                FirstName = employee.FirstName, LastName = employee.LastName, SSN = employee.SSN
+            });
+
+        }
+        return employeeResponseModel;
+    }
 }
