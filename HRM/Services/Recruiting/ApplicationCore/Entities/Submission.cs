@@ -11,7 +11,7 @@ public class Submission
     public DateTime? RejectedOn { get; set; }
     public string? RejectedReason { get; set; }
     
-    public Job Job { get; set; }
-    public Candidate Candidate { get; set; }
+    //public Job Job { get; set; }
+    //public Candidate Candidate { get; set; }
     
 }

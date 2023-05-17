@@ -4,6 +4,7 @@ using Infrastruction.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastruction.Migrations
 {
     [DbContext(typeof(RecruitingDbContext))]
-    partial class RecruitingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230517193344_UpdateCandidateMigrationAgain8")]
+    partial class UpdateCandidateMigrationAgain8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,6 +165,10 @@ namespace Infrastruction.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CandidateId");
+
+                    b.HasIndex("JobId");
+
                     b.ToTable("Submissions");
                 });
 
@@ -174,6 +181,25 @@ namespace Infrastruction.Migrations
                         .IsRequired();
 
                     b.Navigation("JobStatusLookUp");
+                });
+
+            modelBuilder.Entity("ApplicationCore.Entities.Submission", b =>
+                {
+                    b.HasOne("ApplicationCore.Entities.Candidate", "Candidate")
+                        .WithMany()
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApplicationCore.Entities.Job", "Job")
+                        .WithMany()
+                        .HasForeignKey("JobId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Job");
                 });
 #pragma warning restore 612, 618
         }

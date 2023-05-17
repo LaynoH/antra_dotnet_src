@@ -25,14 +25,12 @@ public class CandidateRepository : BaseRepository<Candidate>, ICandidateReposito
         var candidate = await _dbContext.Candidates.FirstOrDefaultAsync(j => j.Id == id);
         return candidate;
     }
-
-    public async Task AddSubmission(Submission submission)
+    
+    public async Task<Submission> AddSubmission(Submission submission)
     {
-        //var candidate = await _dbContext.Candidates.FirstOrDefaultAsync(j => j.Id == submission.CandidateId);
-        //_dbContext.Submissions.Add(submission);
-        //await _dbContext.SaveChangesAsync();
-        
-        await _dbContext.Submissions.AddAsync(submission);
+        _dbContext.Submissions.Add(submission);
+        await _dbContext.SaveChangesAsync();
+        return submission;
     }
 
 }

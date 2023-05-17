@@ -1,0 +1,6 @@
+﻿services:
+  recruiting.api:
+    image: recruiting.api
+    build:
+      context: .
+      dockerfile: Services/Recruiting/Recruiting.API/Dockerfile

@@ -9,7 +9,7 @@ namespace ApplicationCore.Contracts.Repositories
 		Task<Candidate> UpdateResume(int id, string ResumeURL);
 		Task<Candidate> GetCandidateById(int id);
 
-		Task AddSubmission(Submission submission);
+		Task<Submission> AddSubmission(Submission submission);
 	}
 }
 

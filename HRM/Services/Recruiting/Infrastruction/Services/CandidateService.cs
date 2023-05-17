@@ -56,6 +56,7 @@ public class CandidateService : ICandidateService
         };
         var candidate = await _candidateRepository.AddAsync(candidateEntity);
         await _candidateRepository.AddSubmission(submissionEntity);
+        
         return candidate.Id;
     }
     
