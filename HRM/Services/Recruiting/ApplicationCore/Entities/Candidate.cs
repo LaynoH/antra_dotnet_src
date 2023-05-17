@@ -23,5 +23,7 @@ public class Candidate
     
     public DateTime CreatedOn { get; set; }
     
-    public List<Submission> Submissions { get; set; }
+    //public List<Submission> Submissions { get; set; }
+    
+    //public Guid CandidateIdentityId { get; set; }
 }

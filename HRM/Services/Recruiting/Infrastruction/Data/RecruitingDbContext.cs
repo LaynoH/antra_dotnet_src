@@ -28,7 +28,7 @@ public class RecruitingDbContext : DbContext
         // establish the rules for candidate table
         builder.HasKey(c => c.Id);
         builder.Property(c => c.FirstName).HasMaxLength(100);
-        builder.HasIndex(c => c.Email).IsUnique();
+        //builder.HasIndex(c => c.Email).IsUnique();
         builder.Property(c => c.CreatedOn).HasDefaultValueSql("getdate()");
     }
 }

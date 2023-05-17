@@ -17,7 +17,7 @@ namespace Infrastruction.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.4")
+                .HasAnnotation("ProductVersion", "7.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -59,9 +59,6 @@ namespace Infrastruction.Migrations
                         .HasColumnType("nvarchar(2048)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Email")
-                        .IsUnique();
 
                     b.ToTable("Candidates");
                 });
@@ -155,7 +152,6 @@ namespace Infrastruction.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RejectedReason")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("SelectedForInterview")
@@ -187,7 +183,7 @@ namespace Infrastruction.Migrations
             modelBuilder.Entity("ApplicationCore.Entities.Submission", b =>
                 {
                     b.HasOne("ApplicationCore.Entities.Candidate", "Candidate")
-                        .WithMany("Submissions")
+                        .WithMany()
                         .HasForeignKey("CandidateId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -201,11 +197,6 @@ namespace Infrastruction.Migrations
                     b.Navigation("Candidate");
 
                     b.Navigation("Job");
-                });
-
-            modelBuilder.Entity("ApplicationCore.Entities.Candidate", b =>
-                {
-                    b.Navigation("Submissions");
                 });
 #pragma warning restore 612, 618
         }
