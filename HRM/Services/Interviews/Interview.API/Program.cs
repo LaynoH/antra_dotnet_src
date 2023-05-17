@@ -17,7 +17,7 @@ builder.Services.AddScoped<IInterviewService, InterviewService>();
 builder.Services.AddScoped<IInterviewRepository, InterviewRepository>();
 
 builder.Services.AddDbContext<InterviewDbContext>(options => options.UseSqlServer(builder.Configuration.
-    GetConnectionString("RecruitingDbConnection")));
+    GetConnectionString("InterviewDbConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

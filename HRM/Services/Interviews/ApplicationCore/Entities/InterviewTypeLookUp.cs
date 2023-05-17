@@ -4,6 +4,8 @@ namespace ApplicationCore.Entities;
 
 public class InterviewTypeLookUp
 {
+    public int Id { get; set; }
+    
     [MaxLength(50)]
     public string InterviewTypeCode { get; set; }
     

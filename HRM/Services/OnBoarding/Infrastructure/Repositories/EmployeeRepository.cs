@@ -16,7 +16,9 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
     }
     public async Task<List<Employee>> GetAllEmployees()
     {
-        var employees = await _dbContext.Employees.ToListAsync();
+        // with pagination
+        var employees = await _dbContext.Employees.Skip(0).Take(10).ToListAsync();
+        
         return employees;
     }
 
