@@ -80,8 +80,21 @@ public class InterviewService : IInterviewService
         return interviewResponseModel;
     }
 
-    public Task<InterviewRequestModel> Updatenterview(int id)
+    public async Task<InterviewRequestModel> Updatenterview(int id)
     {
-        throw new NotImplementedException();
+        var interview = await _interviewRepository.UpdateAsync(id);
+        if (interview==null)
+        {
+            return null;
+        }
+        var interviewResponseModel = new InterviewRequestModel
+        {
+            Id = interview.Id, BeginTime = interview.BeginTime, CandidateEmail = interview.CandidateEmail,
+            CandidateFirstName = interview.CandidateFirstName, CandidateIdentityId = interview.CandidateIdentityId,
+            CandidateLastName = interview.CandidateLastName, EndTime = interview.EndTime, Feedback = interview.Feedback,
+            InterviewerId = interview.InterviewerId, InterviewTypeId = interview.InterviewTypeId, Passed = interview.Passed,
+            Rating = interview.Rating, SubmissionId = interview.SubmissionId
+        };
+        return interviewResponseModel;
     }
 }

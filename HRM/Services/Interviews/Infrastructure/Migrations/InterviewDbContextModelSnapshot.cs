@@ -97,7 +97,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("JobStatusLookUps");
+                    b.ToTable("InterviewStatusLookUps");
                 });
 
             modelBuilder.Entity("ApplicationCore.Entities.Interviewer", b =>

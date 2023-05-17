@@ -36,9 +36,18 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class
         return entity;
     }
 
-    public async Task<T> UpdateAsync(int id)
+    public async Task<Interview> UpdateAsync(int id)
     {
-        throw new NotImplementedException();
+        var interview = await _dbContext.Interview.FirstOrDefaultAsync(j => j.Id == id);
+        if (interview!= null)
+        {
+            interview.InterviewTypeId = 3;
+            
+            await _dbContext.SaveChangesAsync();
+            return interview;
+        }
+
+        return null;
     }
 
     public async Task<List<Interview>> DeleteAsync(int id)
