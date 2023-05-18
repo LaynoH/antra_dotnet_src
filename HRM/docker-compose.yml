@@ -4,3 +4,9 @@
     build:
       context: .
       dockerfile: Services/Recruiting/Recruiting.API/Dockerfile
+
+  recruiting.api-1:
+    image: recruiting.api-1
+    build:
+      context: .
+      dockerfile: Services/Recruiting/Recruiting.API/Dockerfile
