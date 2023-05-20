@@ -18,9 +18,9 @@ builder.Services.AddScoped<IJobRepository, JobRepository>();
 builder.Services.AddScoped<ICandidateService, CandidateService>();
 builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
 
+var dockerConnectionString = Environment.GetEnvironmentVariable("MSSQLConnectionString");
 
-builder.Services.AddDbContext<RecruitingDbContext>(options => options.UseSqlServer(builder.Configuration.
-    GetConnectionString("RecruitingDbConnection")));
+builder.Services.AddDbContext<RecruitingDbContext>(options => options.UseSqlServer(dockerConnectionString));
 
 var app = builder.Build();
 

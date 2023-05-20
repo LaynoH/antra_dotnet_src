@@ -1,4 +1,5 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0-bullseye-slim-amd64 AS base
+
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
@@ -19,4 +20,5 @@ RUN dotnet publish "Recruiting.API.csproj" -c Release -o /app/publish /p:UseAppH
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+ENV MSSQLConnectionString='Server=tcp:recruiting-server.database.windows.net,1433;Initial Catalog=RecruitingDb;Persist Security Info=False;User ID=chiang90;Password=Qwer0701@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
 ENTRYPOINT ["dotnet", "Recruiting.API.dll"]

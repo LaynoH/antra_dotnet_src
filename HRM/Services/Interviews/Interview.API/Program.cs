@@ -16,8 +16,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IInterviewService, InterviewService>();
 builder.Services.AddScoped<IInterviewRepository, InterviewRepository>();
 
-builder.Services.AddDbContext<InterviewDbContext>(options => options.UseSqlServer(builder.Configuration.
-    GetConnectionString("InterviewDbConnection")));
+var dockerConnectionString = Environment.GetEnvironmentVariable("MSSQLConnectionString");
+
+builder.Services.AddDbContext<InterviewDbContext>(options => options.UseSqlServer(dockerConnectionString));
+//builder.Services.AddDbContext<InterviewDbContext>(options => options.UseSqlServer(builder.Configuration.
+//    GetConnectionString("InterviewDbConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
