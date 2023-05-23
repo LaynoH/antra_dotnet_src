@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+
 namespace Authentication.API.Entities;
 
 public class User : IdentityUser<Guid>
@@ -8,4 +9,5 @@ public class User : IdentityUser<Guid>
     public DateTime? DateOfBirth { get; set; }
     
     public ICollection<UserRole> RolesForUser { get; set; }
+    
 }

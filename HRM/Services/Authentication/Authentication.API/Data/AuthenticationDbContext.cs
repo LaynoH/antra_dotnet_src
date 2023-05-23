@@ -59,5 +59,4 @@ public class AuthenticationDbContext : IdentityDbContext<User, Role, Guid, Ident
 
 
     }
-    
 }
