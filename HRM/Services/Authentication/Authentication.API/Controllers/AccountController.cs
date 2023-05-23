@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using Authentication.API.Entities;
 using Authentication.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Authentication.API.Controllers
 {
@@ -16,6 +20,7 @@ namespace Authentication.API.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly IConfiguration _configuration;
         
         // register
         [HttpPost("register")]
@@ -52,21 +57,50 @@ namespace Authentication.API.Controllers
                 return BadRequest(new {error="Please check email/password format"});
             }
 
-            var user = _userManager.FindByEmailAsync(model.Email);
+            var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null)
             {
                 return BadRequest("username does not exist");
             }
 
-            var isAuthenticated = await _userManager.CheckPasswordAsync(await user, model.Password);
+            var isAuthenticated = await _userManager.CheckPasswordAsync(user, model.Password);
             if (isAuthenticated)
             {
-                return Ok("username password valid");
+                //return Ok("username password valid");
+                return Ok(new { token = CreateJWT(user) });
             }
-
+            
+            // create JWT and send to client (SPA, iOS, Android)
+            
+            
             return Unauthorized("username password is invalid");
         }
 
+        private string CreateJWT(User user)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var secretKey = Encoding.ASCII.GetBytes(_configuration["SecretKey"]);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Expires = DateTime.UtcNow.AddDays(7),
+                Issuer = "HRM",
+                Audience = "HRM Users",
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secretKey),
+                    SecurityAlgorithms.HmacSha256Signature),
+                Subject = new ClaimsIdentity(new []
+                {
+                    new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                    new Claim(JwtRegisteredClaimNames.NameId, user.Id.ToString()),
+                    new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName),
+                    new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
+                    new Claim("language", "english"),
+                    new Claim("location","USA/DC"),
+                    
+                })
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
         //get user by id
     }
 }
