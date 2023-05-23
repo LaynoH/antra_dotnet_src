@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ApplicationCore.Contracts.Services;
 using ApplicationCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,8 +22,24 @@ namespace Interview.API.Controllers
             }
             [Route("")]
             [HttpGet]
+            //[Authorize]
             public async Task<IActionResult> GetAllInterview()
             {
+                // if role = admin, get all
+                // if role  = manager, get only manager's interviews
+                // read the header using HttpContext
+                // JWT token
+                // Authorization Header, bearer "      "
+                // decode JWT to C# object
+                /*if (this.HttpContext.User.Identity.IsAuthenticated)
+                {
+                    // go to database, and get the values
+                }*/
+                var interviews = new List<string>(new[] {"abc, xyz, dddd"});
+
+                return Ok(interviews);
+
+                /* //basic function
                 var interview = await _interviewService.GetAllInterview();
                 if (!interview.Any())
                 {
@@ -30,6 +47,7 @@ namespace Interview.API.Controllers
                 }
         
                 return Ok(interview);
+                */
             }
                 
             [Route("{id:int}", Name = "GetInterviewDetails")]
@@ -82,7 +100,6 @@ namespace Interview.API.Controllers
                 }
         
                 return Ok(interview);
-                
             }
     }
 }
