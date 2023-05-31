@@ -10,7 +10,7 @@ WORKDIR /src
 COPY ["HRM/Services/Recruiting/Recruiting.API/Recruiting.API.csproj", "Services/Recruiting/Recruiting.API/"]
 COPY ["HRM/Services/Recruiting/ApplicationCore/ApplicationCore.csproj", "Services/Recruiting/ApplicationCore/"]
 COPY ["HRM/Services/Recruiting/Infrastruction/Infrastruction.csproj", "Services/Recruiting/Infrastruction/"]
-RUN dotnet restore "HRM/Services/Recruiting/Recruiting.API/Recruiting.API.csproj"
+RUN dotnet restore "Services/Recruiting/Recruiting.API/Recruiting.API.csproj"
 COPY . .
 WORKDIR "/src/Services/Recruiting/Recruiting.API"
 RUN dotnet build "Recruiting.API.csproj" -c Release -o /app/build
