@@ -12,7 +12,7 @@ COPY ["HRM/Services/Recruiting/ApplicationCore/ApplicationCore.csproj", "Service
 COPY ["HRM/Services/Recruiting/Infrastruction/Infrastruction.csproj", "Services/Recruiting/Infrastruction/"]
 RUN dotnet restore "Services/Recruiting/Recruiting.API/Recruiting.API.csproj"
 COPY . .
-WORKDIR "/src/Services/Recruiting/Recruiting.API"
+WORKDIR "/HRM/Services/Recruiting/Recruiting.API"
 RUN dotnet build "Recruiting.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
