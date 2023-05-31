@@ -5,30 +5,28 @@ using Infrastruction.Repositories;
 using Infrastruction.Services;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
-
-
-static void Main(string[] args) { }
-
+static void Main(string[] args)
+{
+    var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
-builder.Services.AddControllers();
+    builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IJobService, JobService>();
-builder.Services.AddScoped<IJobRepository, JobRepository>();
-builder.Services.AddScoped<ICandidateService, CandidateService>();
-builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+    builder.Services.AddScoped<IJobService, JobService>();
+    builder.Services.AddScoped<IJobRepository, JobRepository>();
+    builder.Services.AddScoped<ICandidateService, CandidateService>();
+    builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
 
-var dockerConnectionString = Environment.GetEnvironmentVariable("MSSQLConnectionString");
+    var dockerConnectionString = Environment.GetEnvironmentVariable("MSSQLConnectionString");
 
-builder.Services.AddDbContext<RecruitingDbContext>(
-    options => options.UseSqlServer(builder.Configuration.GetConnectionString("RecruitingDbConnection"))
-);
+    builder.Services.AddDbContext<RecruitingDbContext>(
+        options => options.UseSqlServer(builder.Configuration.GetConnectionString("RecruitingDbConnection"))
+    );
 // builder.Services.AddDbContext<RecruitingDbContext>(options => options.UseSqlServer(dockerConnectionString));
 
-var app = builder.Build();
+    var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
@@ -37,10 +35,11 @@ var app = builder.Build();
     app.UseSwaggerUI();
 //}
 
-app.UseHttpsRedirection();
+    app.UseHttpsRedirection();
 
-app.UseAuthorization();
+    app.UseAuthorization();
 
-app.MapControllers();
+    app.MapControllers();
 
-app.Run();
+    app.Run();
+}
