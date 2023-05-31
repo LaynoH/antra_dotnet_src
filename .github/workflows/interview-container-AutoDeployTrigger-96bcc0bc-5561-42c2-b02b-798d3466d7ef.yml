@@ -1,0 +1,42 @@
+name: Trigger auto deployment for interview-container
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '"HRM/Services/Interviews/Interview.API/Dockerfile"/**'
+    - '.github/workflows/interview-container-AutoDeployTrigger-96bcc0bc-5561-42c2-b02b-798d3466d7ef.yml'
+
+  # Allow mannually trigger 
+  workflow_dispatch:
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.INTERVIEWCONTAINER_AZURE_CREDENTIALS }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          appSourcePath: ${{ github.workspace }}"HRM/Services/Interviews/Interview.API/Dockerfile" 
+          registryUrl: may2023elaine.azurecr.io
+          registryUsername: ${{ secrets.INTERVIEWCONTAINER_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.INTERVIEWCONTAINER_REGISTRY_PASSWORD }}
+          containerAppName: interview-container
+          resourceGroup: May2023Batch
+          imageToBuild: may2023elaine.azurecr.io/interview-container:${{ github.sha }}
+          dockerfilePath: Dockerfile
+
+     
+
