@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - 'HRM/**'
+    - '**'
     - '.github/workflows/recruiting-container-AutoDeployTrigger-20662bd7-87ea-4095-9d97-7f44d57f2e82.yml'
 
   # Allow mannually trigger 
@@ -29,7 +29,7 @@ jobs:
       - name: Build and push container image to registry
         uses: azure/container-apps-deploy-action@v1
         with:
-          appSourcePath: ${{ github.workspace }}HRM 
+          appSourcePath: ${{ github.workspace }} 
           registryUrl: may2023elaine.azurecr.io
           registryUsername: ${{ secrets.RECRUITINGCONTAINER_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.RECRUITINGCONTAINER_REGISTRY_PASSWORD }}
