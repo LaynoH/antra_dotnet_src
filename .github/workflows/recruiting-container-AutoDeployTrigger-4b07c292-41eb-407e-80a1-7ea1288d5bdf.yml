@@ -8,7 +8,7 @@ on:
       [ main ]
     paths:
     - 'HRM/Services/Recruiting/**'
-    - '.github/workflows/recruiting-container-AutoDeployTrigger-9b00ed17-4cee-4a3f-8059-e3b1e033736c.yml'
+    - '.github/workflows/recruiting-container-AutoDeployTrigger-4b07c292-41eb-407e-80a1-7ea1288d5bdf.yml'
 
   # Allow mannually trigger 
   workflow_dispatch:
