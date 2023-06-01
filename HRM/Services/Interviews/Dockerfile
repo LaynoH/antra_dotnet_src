@@ -11,7 +11,7 @@ WORKDIR /src
 COPY ["Interview.API/", "src/Services/Interview/Interview.API/"]
 COPY ["ApplicationCore/", "src/Services/Interview/ApplicationCore/"]
 COPY ["Infrastructure/", "src/Services/Interview/Infrastructure/"]
-RUN dotnet restore "src/Services/Interviews/Interview.API/Interview.API.csproj"
+RUN dotnet restore "/src/Services/Interviews/Interview.API/Interview.API.csproj"
 #COPY . .
 WORKDIR "/src/src/Services/Interviews/Interview.API"
 RUN dotnet build "Interview.API.csproj" -c Release -o /app/build
