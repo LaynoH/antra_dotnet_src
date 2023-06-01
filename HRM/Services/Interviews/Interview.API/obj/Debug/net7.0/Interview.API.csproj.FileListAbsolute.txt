@@ -278,3 +278,4 @@
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/bin/Debug/net7.0/System.CodeDom.dll
+/Users/elainechiang/Desktop/life/antraSEP/repos/HRM/Services/Interviews/Interview.API/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
