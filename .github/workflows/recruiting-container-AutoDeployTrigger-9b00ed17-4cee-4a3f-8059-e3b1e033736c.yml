@@ -35,7 +35,7 @@ jobs:
           registryPassword: ${{ secrets.RECRUITINGCONTAINER_REGISTRY_PASSWORD }}
           containerAppName: recruiting-container
           resourceGroup: May2023Batch
-          imageToBuild: may2023elaine.azurecr.io/recruiting-container:${{ github.sha }}
+          imageToBuild: may2023elaine.azurecr.io/recruiting-microservice:${{ github.sha }}
           dockerfilePath: Dockerfile
 
      
