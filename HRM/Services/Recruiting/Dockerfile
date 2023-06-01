@@ -11,9 +11,9 @@ WORKDIR /src
 COPY ["Recruiting.API/", "src/Services/Recruiting/Recruiting.API/"]
 COPY ["ApplicationCore/", "src/Services/Recruiting/ApplicationCore/"]
 COPY ["Infrastruction/", "src/Services/Recruiting/Infrastruction/"]
-RUN dotnet restore "Services/Recruiting/Recruiting.API/Recruiting.API.csproj"
-COPY . .
-WORKDIR "/src/Services/Recruiting/Recruiting.API"
+RUN dotnet restore "src/Services/Recruiting/Recruiting.API/Recruiting.API.csproj"
+#COPY . .
+WORKDIR "/src/src/Services/Recruiting/Recruiting.API"
 RUN dotnet build "Recruiting.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
