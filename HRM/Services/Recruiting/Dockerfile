@@ -15,7 +15,7 @@ RUN dotnet restore "src/Services/Recruiting/Recruiting.API/Recruiting.API.csproj
 #RUN dotnet restore "Services/Recruiting/Recruiting.API/Recruiting.API.csproj"
 #COPY . .
 WORKDIR "/src/src/Services/Recruiting/Recruiting.API"
-WORKDIR "Services/Recruiting/Recruiting.API"
+#WORKDIR "Services/Recruiting/Recruiting.API"
 RUN dotnet build "Recruiting.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
