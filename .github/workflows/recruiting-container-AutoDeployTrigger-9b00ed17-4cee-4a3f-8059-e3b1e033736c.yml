@@ -8,7 +8,7 @@ on:
       [ main ]
     paths:
     - 'HRM/Services/Recruiting/**'
-    - '.github/workflows/recruiting-container-AutoDeployTrigger-0e09fcc8-7946-4829-a48b-3de7d614fbdf.yml'
+    - '.github/workflows/recruiting-container-AutoDeployTrigger-9b00ed17-4cee-4a3f-8059-e3b1e033736c.yml'
 
   # Allow mannually trigger 
   workflow_dispatch:
@@ -35,7 +35,7 @@ jobs:
           registryPassword: ${{ secrets.RECRUITINGCONTAINER_REGISTRY_PASSWORD }}
           containerAppName: recruiting-container
           resourceGroup: May2023Batch
-          imageToBuild: may2023elaine.azurecr.io/recruiting-container:${{ github.sha }}
+          imageToBuild: may2023elaine.azurecr.io/recruiting-microservice:${{ github.sha }}
           dockerfilePath: Dockerfile
 
      
