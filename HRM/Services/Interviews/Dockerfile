@@ -8,10 +8,11 @@ WORKDIR /src
 #COPY ["Services/Interviews/Interview.API/Interview.API.csproj", "Services/Interviews/Interview.API/"]
 #COPY ["Services/Interviews/ApplicationCore/ApplicationCore.csproj", "Services/Interviews/ApplicationCore/"]
 #COPY ["Services/Interviews/Infrastructure/Infrastructure.csproj", "Services/Interviews/Infrastructure/"]
-COPY ["Interview.API/", "src/Services/Interview/Interview.API/"]
-COPY ["ApplicationCore/", "src/Services/Interview/ApplicationCore/"]
-COPY ["Infrastructure/", "src/Services/Interview/Infrastructure/"]
+COPY ["Interview.API/", "src/Services/Interviews/Interview.API/"]
+COPY ["ApplicationCore/", "src/Services/Interviews/ApplicationCore/"]
+COPY ["Infrastructure/", "src/Services/Interviews/Infrastructure/"]
 RUN dotnet restore "src/Services/Interviews/Interview.API/Interview.API.csproj"
+
 #COPY . .
 WORKDIR "/src/src/Services/Interviews/Interview.API"
 RUN dotnet build "Interview.API.csproj" -c Release -o /app/build
