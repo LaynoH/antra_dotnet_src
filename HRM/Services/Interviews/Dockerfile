@@ -24,4 +24,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENV MSSQLConnectionString='Server=tcp:interview--server.database.windows.net,1433;Initial Catalog=InterviewDbContext;Persist Security Info=False;User ID=chiang90;Password=Qwer0701@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
+ENV angularURL='http://localhost:4200' 
 ENTRYPOINT ["dotnet", "Interview.API.dll"]
