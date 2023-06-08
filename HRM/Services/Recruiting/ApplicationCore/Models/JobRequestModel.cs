@@ -7,7 +7,7 @@ public class JobRequestModel
     public int Id { get; set; }
     [Required(ErrorMessage = "Please enter Title of the Job")]
     [StringLength(256)]
-    public string Ttile { get; set; }
+    public string Title { get; set; }
     
     [Required(ErrorMessage = "Please enter Job description")]
     [StringLength(5000)]
