@@ -17,7 +17,7 @@ WORKDIR "/src/src/Services/Authentication/Authentication.API"
 RUN dotnet build "Authentication.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Authentication.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "Authentication.API.csproj" -c Release -o /app/publish -r linux-x64 --self-contained false /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app

@@ -49,7 +49,8 @@ namespace Authentication.API.Controllers
             var result = await _userManager.CreateAsync(user, model.Password);
             if (!result.Errors.Any())
             {
-                return CreatedAtRoute("GetUser", new { controller = "account", id = user.Id }, "Registration Successfully!");
+                //return CreatedAtRoute("GetUser", new { controller = "account", id = user.Id }, "Registration Successfully!");
+                return Ok();
             }
 
             return BadRequest(result.Errors.Select(error=>error.Description).ToList());
@@ -108,9 +109,9 @@ namespace Authentication.API.Controllers
         }
         //get user by id
         [HttpGet("{userID}", Name = "GetUser")]
-        public async Task<IActionResult> GetUser(string userID)
+        public async Task<IActionResult> GetUser(Guid userID)
         {
-            var user = await _userManager.FindByIdAsync(userID);
+            var user = await _userManager.FindByIdAsync(userID.ToString());
             if (user == null)
             {
                 return NotFound("User not exist with given ID");
