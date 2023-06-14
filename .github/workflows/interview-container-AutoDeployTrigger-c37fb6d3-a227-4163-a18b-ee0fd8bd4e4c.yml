@@ -8,7 +8,7 @@ on:
       [ main ]
     paths:
     - 'HRM/Services/Interviews/**'
-    - '.github/workflows/interview-container-AutoDeployTrigger-8899d22c-6011-4abb-8d95-3c919b50d686.yml'
+    - '.github/workflows/interview-container-AutoDeployTrigger-c37fb6d3-a227-4163-a18b-ee0fd8bd4e4c.yml'
 
   # Allow mannually trigger 
   workflow_dispatch:
@@ -35,7 +35,7 @@ jobs:
           registryPassword: ${{ secrets.INTERVIEWCONTAINER_REGISTRY_PASSWORD }}
           containerAppName: interview-container
           resourceGroup: May2023Batch
-          imageToBuild: may2023elaine.azurecr.io/interview-microservice:${{ github.sha }}
+          imageToBuild: may2023elaine.azurecr.io/interview-container:${{ github.sha }}
           dockerfilePath: Dockerfile
 
      
