@@ -16,12 +16,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
-var dockerConnectionString = Environment.GetEnvironmentVariable("MSSQLConnectionString");
+//var dockerConnectionString = Environment.GetEnvironmentVariable("MSSQLConnectionString");
 
-builder.Services.AddDbContext<EmployeeDbContext>(options => options.UseSqlServer(dockerConnectionString));
+//builder.Services.AddDbContext<EmployeeDbContext>(options => options.UseSqlServer(dockerConnectionString));
 
-//builder.Services.AddDbContext<EmployeeDbContext>(options => options.UseSqlServer(builder.Configuration.
-//    GetConnectionString("EmployeeDbConnection")));
+builder.Services.AddDbContext<EmployeeDbContext>(options => options.UseSqlServer(builder.Configuration.
+    GetConnectionString("EmployeeDbConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
