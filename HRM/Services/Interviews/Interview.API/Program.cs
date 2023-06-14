@@ -19,11 +19,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IInterviewService, InterviewService>();
 builder.Services.AddScoped<IInterviewRepository, InterviewRepository>();
 
-//var dockerConnectionString = Environment.GetEnvironmentVariable("MSSQLConnectionString");
+var dockerConnectionString = Environment.GetEnvironmentVariable("MSSQLConnectionString");
 
-//builder.Services.AddDbContext<InterviewDbContext>(options => options.UseSqlServer(dockerConnectionString));
-builder.Services.AddDbContext<InterviewDbContext>(options => options.UseSqlServer(builder.Configuration.
-    GetConnectionString("InterviewDbConnection")));
+builder.Services.AddDbContext<InterviewDbContext>(options => options.UseSqlServer(dockerConnectionString));
+//builder.Services.AddDbContext<InterviewDbContext>(options => options.UseSqlServer(builder.Configuration.
+//    GetConnectionString("InterviewDbConnection")));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

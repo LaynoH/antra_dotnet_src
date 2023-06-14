@@ -22,6 +22,6 @@ RUN dotnet publish "OnBoarding.API.csproj"  -c Release -o /app/publish -r linux-
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENV MSSQLConnectionString='Server=tcp:onboarding--server.database.windows.net,1433;Initial Catalog=EmployeeDbContext;Persist Security Info=False;User ID=chiang90;Password=Qwer0701@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
+ENV MSSQLConnectionString='Server=tcp:hrm-server.database.windows.net,1433;Initial Catalog=EmployeeDbContext;Persist Security Info=False;User ID=chiang90;Password=Qwer0701@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
 ENV angularURL='http://localhost:4200' 
 ENTRYPOINT ["dotnet", "OnBoarding.API.dll"]
