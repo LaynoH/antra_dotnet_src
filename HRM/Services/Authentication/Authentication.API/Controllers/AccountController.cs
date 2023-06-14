@@ -45,12 +45,13 @@ namespace Authentication.API.Controllers
                 LastName = model.LastName,
                 UserName = model.Email,
             };
+            
             // save the user info to the user table
             var result = await _userManager.CreateAsync(user, model.Password);
             if (!result.Errors.Any())
             {
-                //return CreatedAtRoute("GetUser", new { controller = "account", id = user.Id }, "Registration Successfully!");
-                return Ok();
+                return CreatedAtRoute("GetUser", new { controller = "account", userID = user.Id }, "Registration Successfully!");
+                //return Ok();
             }
 
             return BadRequest(result.Errors.Select(error=>error.Description).ToList());
